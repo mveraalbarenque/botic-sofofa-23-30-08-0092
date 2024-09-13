@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Diccionario de datos</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<h2>Diccionario de datos (MVERA)</h2>
+	<ul id="index">
+		<li><strong>Database: </strong>private</strong>
+		<li><br /><strong>Tables</strong>
+			<ul>
+				<li><a href="#public.payment">public.payment</a></li>
+				<li><a href="#public.rental">public.rental</a></li>
+				<li><a href="#public.store">public.store</a></li>
+				<li><a href="#public.staff">public.staff</a></li>
+				<li><a href="#public.customer">public.customer</a></li>
+				<li><a href="#public.address">public.address</a></li>
+				<li><a href="#public.inventory">public.inventory</a></li>
+				<li><a href="#public.film_category">public.film_category</a></li>
+				<li><a href="#public.film_actor">public.film_actor</a></li>
+				<li><a href="#public.film">public.film</a></li>
+				<li><a href="#public.city">public.city</a></li>
+				<li><a href="#public.country">public.country</a></li>
+				<li><a href="#public.language">public.language</a></li>
+				<li><a href="#public.category">public.category</a></li>
+				<li><a href="#public.actor">public.actor</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<!-- Payment Table -->
+	<table id="public.payment" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>payment</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>payment_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>customer_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>staff_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rental_id</td>
+				<td class="data-type">int4</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>amount</td>
+				<td class="data-type">numeric(5, 2)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>payment_date</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Rental Table -->
+	<table id="public.rental" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>rental</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>rental_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rental_date</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>inventory_id</td>
+				<td class="data-type">int4</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>customer_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>return_date</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>staff_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Store Table -->
+	<table id="public.store" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>store</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>store_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>manager_staff_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>address_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Staff Table -->
+	<table id="public.staff" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>staff</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>staff_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>first_name</td>
+				<td class="data-type">varchar(45)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_name</td>
+				<td class="data-type">varchar(45)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>address_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>email</td>
+				<td class="data-type">varchar(50)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>store_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>active</td>
+				<td class="data-type">bool</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">true</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Customer Table -->
+	<table id="public.customer" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>customer</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>customer_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>store_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>first_name</td>
+				<td class="data-type">varchar(45)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_name</td>
+				<td class="data-type">varchar(45)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>email</td>
+				<td class="data-type">varchar(50)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>address_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>active</td>
+				<td class="data-type">bool</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">true</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>create_date</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Address Table -->
+	<table id="public.address" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>address</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>address_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>address</td>
+				<td class="data-type">varchar(50)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>address2</td>
+				<td class="data-type">varchar(50)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>district</td>
+				<td class="data-type">varchar(20)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>city_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>postal_code</td>
+				<td class="data-type">varchar(10)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>phone</td>
+				<td class="data-type">varchar(20)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- City Table -->
+	<table id="public.city" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>city</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>city_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>city</td>
+				<td class="data-type">varchar(50)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>country_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Country Table -->
+	<table id="public.country" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>country</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>country_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>country</td>
+				<td class="data-type">varchar(50)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Film Table -->
+	<table id="public.film" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>film</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>film_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td class="data-type">varchar(255)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>description</td>
+				<td class="data-type">text</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>release_year</td>
+				<td class="data-type">int4</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>language_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>original_language_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rental_duration</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">3</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rental_rate</td>
+				<td class="data-type">numeric(4, 2)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">4.99</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>length</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>replacement_cost</td>
+				<td class="data-type">numeric(5, 2)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">19.99</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rating</td>
+				<td class="data-type">varchar(10)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Film Actor Table -->
+	<table id="public.film_actor" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>film_actor</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>actor_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>film_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- Film Category Table -->
+	<table id="public.film_category" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>film_category</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>film_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>category_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Inventory Table -->
+	<table id="public.inventory" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>inventory</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>inventory_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>film_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>store_id</td>
+				<td class="data-type">int2</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Language Table -->
+	<table id="public.language" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>language</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>language_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td class="data-type">bpchar(20)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Category Table -->
+	<table id="public.category" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>category</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>category_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td class="data-type">varchar(25)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Actor Table -->
+	<table id="public.actor" class="table">
+		<caption class="tab-name">
+			<em>public</em>.<strong>actor</strong>
+			<span class="type-label">Table</span>
+		</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Data type</th>
+				<th>PK</th>
+				<th>FK</th>
+				<th>UQ</th>
+				<th>Not null</th>
+				<th>Default value</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>actor_id</td>
+				<td class="data-type">serial4</td>
+				<td class="bool-field">&#10003;</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>first_name</td>
+				<td class="data-type">varchar(45)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_name</td>
+				<td class="data-type">varchar(45)</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>last_update</td>
+				<td class="data-type">timestamp</td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field"></td>
+				<td class="bool-field">&#10003;</td>
+				<td class="value">now()</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
