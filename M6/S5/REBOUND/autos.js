@@ -2,6 +2,7 @@ import { readFileJson, handleUpdateCar } from "./helpers.js";
 import { msgInfo } from "./utils.js";
 
 const optionIn = process.argv.slice(2);
+console.log(optionIn);
 
 const selectOptions = async (input) => {
   if (input[0] === "leer") await handleReadOption(input[1]);
